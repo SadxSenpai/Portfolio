@@ -33,7 +33,7 @@
                     <h1>Hello, I'm <span class="highlight glitch" data-text="Marvin">Marvin</span></h1>
                     <p class="hero-subtitle"><span class="typewriter"></span></p>
                     <div class="hero-btns">
-                        <a href="#projects" class="btn">View My Work</a>
+                        <a href="#expertise" class="btn">View My Expertise</a>
                         <a href="#contact" class="btn btn-outline">Contact Me</a>
                     </div>
                 </div>
@@ -75,52 +75,62 @@
             </div>
         </section>
 
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I am a passionate developer with a knack for creating efficient and scalable solutions. My journey in coding began with a curiosity for how things work, which quickly evolved into a career in software development.</p>
+                        <p>With a strong foundation in C# and .NET, I specialize in building robust applications and immersive games. I love tackling complex problems and turning ideas into reality through code.</p>
+                    </div>
+                    <div class="skills">
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">.NET Core</span>
+                        <span class="skill-tag">Unity</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">Docker</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="expertise" class="expertise">
             <div class="container">
                 <h2>My Expertise</h2>
-                <div class="carousel-container" id="expertise-carousel">
-                    <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
-                    <div class="carousel-track-container">
-                        <ul class="carousel-track">
-                            <li class="carousel-slide">
-                                <div class="expertise-card" data-tilt>
-                                    <div class="card-icon"><i class="fab fa-unity"></i></div>
-                                    <h3>Unity Game Dev</h3>
-                                    <p>Creating immersive 2D and 3D gaming experiences. Proficient in C# scripting, physics, and game mechanics.</p>
-                                    <div class="tech-tags">
-                                        <span>Unity Engine</span>
-                                        <span>C#</span>
-                                        <span>Game Design</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="carousel-slide">
-                                <div class="expertise-card" data-tilt>
-                                    <div class="card-icon"><i class="fab fa-microsoft"></i></div>
-                                    <h3>C# .NET Development</h3>
-                                    <p>Developing robust desktop and web applications using the .NET ecosystem. Specializing in clean architecture.</p>
-                                    <div class="tech-tags">
-                                        <span>.NET 8</span>
-                                        <span>WPF</span>
-                                        <span>Windows Apps</span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="carousel-slide">
-                                <div class="expertise-card" data-tilt>
-                                    <div class="card-icon"><i class="fab fa-discord"></i></div>
-                                    <h3>Discord Bots</h3>
-                                    <p>Creating advanced, interactive Discord bots using Python (discord.py) and C#. From tools to game integrations.</p>
-                                    <div class="tech-tags">
-                                        <span>discord.py</span>
-                                        <span>Python</span>
-                                        <span>C#</span>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+                <div class="expertise-grid">
+                    <div class="expertise-card" data-tilt>
+                        <div class="card-icon"><i class="fab fa-unity"></i></div>
+                        <h3>Unity Game Dev</h3>
+                        <p>Creating immersive 2D and 3D gaming experiences. Proficient in C# scripting, physics, and game mechanics.</p>
+                        <div class="tech-tags">
+                            <span>Unity Engine</span>
+                            <span>C#</span>
+                            <span>Game Design</span>
+                        </div>
                     </div>
-                    <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                    <div class="expertise-card" data-tilt>
+                        <div class="card-icon"><i class="fab fa-microsoft"></i></div>
+                        <h3>C# .NET Development</h3>
+                        <p>Developing robust desktop and web applications using the .NET ecosystem. Specializing in clean architecture.</p>
+                        <div class="tech-tags">
+                            <span>.NET 8</span>
+                            <span>WPF</span>
+                            <span>Windows Apps</span>
+                        </div>
+                    </div>
+                    <div class="expertise-card" data-tilt>
+                        <div class="card-icon"><i class="fab fa-discord"></i></div>
+                        <h3>Discord Bots</h3>
+                        <p>Creating advanced, interactive Discord bots using Python (discord.py) and C#. From tools to game integrations.</p>
+                        <div class="tech-tags">
+                            <span>discord.py</span>
+                            <span>Python</span>
+                            <span>C#</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -128,55 +138,43 @@
         <section id="projects" class="projects">
             <div class="container">
                 <h2>Featured Projects</h2>
-                <div class="carousel-container" id="projects-carousel">
-                    <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
-                    <div class="carousel-track-container">
-                        <ul class="carousel-track">
-                            <li class="carousel-slide">
-                                <div class="project-card">
-                                    <div class="project-image" style="background: linear-gradient(45deg, #000000, #808080);">
-                                        <i class="fab fa-unity project-icon-overlay"></i>
-                                    </div>
-                                    <div class="project-info">
-                                        <h3>Funny Platformer</h3>
-                                        <p>A 2D platformer game built with Unity and C#.</p>
-                                        <div class="project-links">
-                                            <a href="https://github.com/SadxSenpai/Funny_Platformer" target="_blank"><i class="fab fa-github"></i> Code</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="carousel-slide">
-                                <div class="project-card">
-                                    <div class="project-image" style="background: linear-gradient(45deg, #512bd4, #d42b99);">
-                                        <i class="fab fa-microsoft project-icon-overlay"></i>
-                                    </div>
-                                    <div class="project-info">
-                                        <h3>Buecherei Windows App</h3>
-                                        <p>A library management system for Windows built with C#.</p>
-                                        <div class="project-links">
-                                            <a href="https://github.com/SadxSenpai/Buecherei_Windows_App" target="_blank"><i class="fab fa-github"></i> Code</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="carousel-slide">
-                                <div class="project-card">
-                                    <div class="project-image" style="background: linear-gradient(45deg, #306998, #FFD43B);">
-                                        <i class="fab fa-discord project-icon-overlay"></i>
-                                    </div>
-                                    <div class="project-info">
-                                        <h3>Puff Pastry Parser</h3>
-                                        <p>A Python Discord bot for parsing and processing data.</p>
-                                        <div class="project-links">
-                                            <a href="https://github.com/SadxSenpai/PuffPastry-Parser" target="_blank"><i class="fab fa-github"></i> Code</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <div class="project-image" style="background: linear-gradient(45deg, #000000, #808080);">
+                            <i class="fab fa-unity project-icon-overlay"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>Funny Platformer</h3>
+                            <p>A 2D platformer game built with Unity and C#.</p>
+                            <div class="project-links">
+                                <a href="play-platformer.html"><i class="fas fa-gamepad"></i> Play Now</a>
+                            </div>
+                        </div>
                     </div>
-                    <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                    <div class="project-card">
+                        <div class="project-image" style="background: linear-gradient(45deg, #512bd4, #d42b99);">
+                            <i class="fab fa-microsoft project-icon-overlay"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>Buecherei Windows App</h3>
+                            <p>A library management system for Windows built with C#.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/SadxSenpai/Buecherei_Windows_App" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image" style="background: linear-gradient(45deg, #306998, #FFD43B);">
+                            <i class="fab fa-discord project-icon-overlay"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>Puff Pastry Parser</h3>
+                            <p>A Python Discord bot for parsing and processing data.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/SadxSenpai/PuffPastry-Parser" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -195,7 +193,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
+        <p>&copy; 2025 Marvin Hauser. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>

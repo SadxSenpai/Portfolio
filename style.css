@@ -454,6 +454,13 @@ h2::after {
 }
 
 /* Expertise Section */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
 .expertise-card {
     background: rgba(10, 10, 10, 0.9);
     border: 1px solid var(--border-color);
@@ -529,6 +536,12 @@ h2::after {
 }
 
 /* Projects Section */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
 .project-card {
     background: var(--card-bg);
     border-radius: 0;
@@ -605,6 +618,11 @@ h2::after {
 /* Contact Section */
 .contact {
     text-align: center;
+}
+
+.contact h2 {
+    left: auto;
+    transform: none;
 }
 
 .contact p {
