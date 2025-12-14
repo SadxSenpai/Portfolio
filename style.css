@@ -18,6 +18,12 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
 body {
     font-family: 'Rajdhani', sans-serif;
     background-color: var(--bg-color);
@@ -471,6 +477,9 @@ h2::after {
     overflow: hidden;
     backdrop-filter: blur(10px);
     height: 100%;
+    will-change: transform;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
 }
 
 .expertise-card::before {
@@ -672,13 +681,31 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
     .hero-container {
-        flex-direction: column-reverse;
+        flex-direction: column;
         text-align: center;
-        justify-content: center;
+        justify-content: flex-start;
+        padding-top: 2rem;
+    }
+
+    .hero {
+        height: auto;
+        min-height: auto;
+        padding-top: 100px;
+        padding-bottom: 50px;
+        overflow: visible;
     }
 
     .hero-text {
         text-align: center;
+        margin-top: 0;
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+
+    .hero-visual {
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     .hero-btns {
@@ -687,6 +714,27 @@ footer {
 
     .hero h1 {
         font-size: 2.5rem;
+    }
+
+    .code-window {
+        transform: none;
+        margin: 0 auto;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .window-body {
+        padding: 10px 0;
+        font-size: clamp(0.55rem, 3.15vw, 0.9rem);
+    }
+
+    .code-content {
+        padding-left: 10px;
+        overflow-x: auto;
+    }
+
+    .line-numbers {
+        padding: 0 10px;
     }
     
     .about-content {

@@ -21,6 +21,17 @@ document.addEventListener('DOMContentLoaded', () => {
             // Burger Animation
             burger.classList.toggle('toggle');
         });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (nav.classList.contains('nav-active') && !nav.contains(e.target) && !burger.contains(e.target)) {
+                nav.classList.remove('nav-active');
+                burger.classList.remove('toggle');
+                navLinks.forEach((link) => {
+                    link.style.animation = '';
+                });
+            }
+        });
     }
 
     // Smooth Scrolling for Anchor Links
@@ -69,6 +80,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Tilt Effect for Cards
     const cards = document.querySelectorAll('.expertise-card');
     cards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            // Remove transition during movement to prevent lag
+            card.style.transition = 'none';
+        });
+
         card.addEventListener('mousemove', (e) => {
             const rect = card.getBoundingClientRect();
             const x = e.clientX - rect.left;
@@ -84,6 +100,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         
         card.addEventListener('mouseleave', () => {
+            // Restore transition for smooth reset
+            card.style.transition = 'transform 0.5s ease';
             card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
         });
     });
