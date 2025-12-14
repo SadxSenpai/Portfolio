@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reincarnated Fantasy Farmer - Play</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo" onclick="location.href='index.html'">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container" style="padding-top: 150px; min-height: 80vh; text-align: center;">
+            <h2>Reincarnated Fantasy Farmer</h2>
+            <div id="game-container" style="width: 960px; height: 600px; background: #000; margin: 2rem auto; border: 2px solid var(--primary-color);">
+                <!-- Game Canvas or Iframe will go here -->
+                <p style="padding-top: 280px; color: var(--text-muted);">Game Loading...</p>
+            </div>
+            <button class="btn" onclick="toggleFullscreen()">Fullscreen</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Marvin Hauser. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function toggleFullscreen() {
+            const container = document.getElementById('game-container');
+            if (!document.fullscreenElement) {
+                container.requestFullscreen().catch(err => {
+                    alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+    </script>
+</body>
+</html>
