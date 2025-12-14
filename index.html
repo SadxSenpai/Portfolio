@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <canvas id="hero-canvas"></canvas>
+            <div class="container hero-container">
+                <div class="hero-text">
+                    <h1>Hello, I'm <span class="highlight glitch" data-text="Marvin">Marvin</span></h1>
+                    <p class="hero-subtitle"><span class="typewriter"></span></p>
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn">View My Work</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="code-window">
+                        <div class="window-header">
+                            <div class="buttons">
+                                <div class="dot red"></div>
+                                <div class="dot yellow"></div>
+                                <div class="dot green"></div>
+                            </div>
+                            <div class="filename">Portfolio.cs</div>
+                        </div>
+                        <div class="window-body">
+                            <div class="line-numbers">
+                                <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span>
+                            </div>
+                            <div class="code-content">
+                                <pre><code><span class="keyword">public class</span> <span class="class-name">Developer</span> 
+{
+    <span class="keyword">public string</span> <span class="property">Name</span> { <span class="keyword">get;</span> } = <span class="string">"Marvin"</span>;
+    <span class="keyword">public string[]</span> <span class="property">Skills</span> { <span class="keyword">get;</span> } = {
+        <span class="string">"C#"</span>, <span class="string">".NET"</span>, <span class="string">"Unity"</span>
+    };
+
+    <span class="keyword">public async Task</span> <span class="function">CreateMagic</span>() 
+    {
+        <span class="keyword">while</span>(<span class="boolean">!Coffee.IsEmpty</span>) 
+        {
+            <span class="keyword">await</span> <span class="function">Code</span>();
+            <span class="keyword">await</span> <span class="function">Deploy</span>();
+        }
+    }
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="expertise" class="expertise">
+            <div class="container">
+                <h2>My Expertise</h2>
+                <div class="carousel-container" id="expertise-carousel">
+                    <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+                    <div class="carousel-track-container">
+                        <ul class="carousel-track">
+                            <li class="carousel-slide">
+                                <div class="expertise-card" data-tilt>
+                                    <div class="card-icon"><i class="fab fa-unity"></i></div>
+                                    <h3>Unity Game Dev</h3>
+                                    <p>Creating immersive 2D and 3D gaming experiences. Proficient in C# scripting, physics, and game mechanics.</p>
+                                    <div class="tech-tags">
+                                        <span>Unity Engine</span>
+                                        <span>C#</span>
+                                        <span>Game Design</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="carousel-slide">
+                                <div class="expertise-card" data-tilt>
+                                    <div class="card-icon"><i class="fab fa-microsoft"></i></div>
+                                    <h3>C# .NET Development</h3>
+                                    <p>Developing robust desktop and web applications using the .NET ecosystem. Specializing in clean architecture.</p>
+                                    <div class="tech-tags">
+                                        <span>.NET 8</span>
+                                        <span>WPF</span>
+                                        <span>Windows Apps</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="carousel-slide">
+                                <div class="expertise-card" data-tilt>
+                                    <div class="card-icon"><i class="fab fa-discord"></i></div>
+                                    <h3>Discord Bots</h3>
+                                    <p>Creating advanced, interactive Discord bots using Python (discord.py) and C#. From tools to game integrations.</p>
+                                    <div class="tech-tags">
+                                        <span>discord.py</span>
+                                        <span>Python</span>
+                                        <span>C#</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>Featured Projects</h2>
+                <div class="carousel-container" id="projects-carousel">
+                    <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+                    <div class="carousel-track-container">
+                        <ul class="carousel-track">
+                            <li class="carousel-slide">
+                                <div class="project-card">
+                                    <div class="project-image" style="background: linear-gradient(45deg, #000000, #808080);">
+                                        <i class="fab fa-unity project-icon-overlay"></i>
+                                    </div>
+                                    <div class="project-info">
+                                        <h3>Funny Platformer</h3>
+                                        <p>A 2D platformer game built with Unity and C#.</p>
+                                        <div class="project-links">
+                                            <a href="https://github.com/SadxSenpai/Funny_Platformer" target="_blank"><i class="fab fa-github"></i> Code</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="carousel-slide">
+                                <div class="project-card">
+                                    <div class="project-image" style="background: linear-gradient(45deg, #512bd4, #d42b99);">
+                                        <i class="fab fa-microsoft project-icon-overlay"></i>
+                                    </div>
+                                    <div class="project-info">
+                                        <h3>Buecherei Windows App</h3>
+                                        <p>A library management system for Windows built with C#.</p>
+                                        <div class="project-links">
+                                            <a href="https://github.com/SadxSenpai/Buecherei_Windows_App" target="_blank"><i class="fab fa-github"></i> Code</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="carousel-slide">
+                                <div class="project-card">
+                                    <div class="project-image" style="background: linear-gradient(45deg, #306998, #FFD43B);">
+                                        <i class="fab fa-discord project-icon-overlay"></i>
+                                    </div>
+                                    <div class="project-info">
+                                        <h3>Puff Pastry Parser</h3>
+                                        <p>A Python Discord bot for parsing and processing data.</p>
+                                        <div class="project-links">
+                                            <a href="https://github.com/SadxSenpai/PuffPastry-Parser" target="_blank"><i class="fab fa-github"></i> Code</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <p>Have a project in mind or just want to say hi?</p>
+                <a href="mailto:email@example.com" class="btn btn-outline">Say Hello</a>
+                <div class="social-links">
+                    <a href="https://github.com/SadxSenpai" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/marvin-h-952216265/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
