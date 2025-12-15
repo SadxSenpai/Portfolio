@@ -212,7 +212,31 @@
             <div class="container">
                 <h2>Get In Touch</h2>
                 <p>Have a project in mind or just want to say hi?</p>
-                <a href="mailto:email@example.com" class="btn btn-outline">Say Hello</a>
+
+                <div class="contact-form-wip" aria-disabled="true">
+                    <div class="contact-form-wip-header">
+                        <span class="wip-badge">WIP</span>
+                        <span class="wip-text">Email contact form (coming soon)</span>
+                    </div>
+                    <form class="contact-form" action="#" method="post">
+                        <div class="contact-form-row">
+                            <label>
+                                <span>Name</span>
+                                <input type="text" name="name" placeholder="Your name" disabled>
+                            </label>
+                            <label>
+                                <span>Email</span>
+                                <input type="email" name="email" placeholder="you@example.com" disabled>
+                            </label>
+                        </div>
+                        <label class="contact-form-message">
+                            <span>Message</span>
+                            <textarea name="message" rows="5" placeholder="Your message..." disabled></textarea>
+                        </label>
+                        <button class="btn" type="button" disabled>Send Message</button>
+                    </form>
+                </div>
+
                 <div class="social-links">
                     <a href="https://github.com/SadxSenpai" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/marvin-h-952216265/" target="_blank"><i class="fab fa-linkedin"></i></a>
