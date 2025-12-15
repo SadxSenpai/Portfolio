@@ -16,6 +16,11 @@
             padding-top: 100px;
             padding-bottom: 50px;
         }
+        .game-container h2 {
+            left: auto;
+            transform: none;
+            margin-bottom: 1.5rem;
+        }
         iframe {
             width: 90%;
             max-width: 960px;
@@ -26,17 +31,10 @@
             background: #000;
             overflow: hidden;
         }
-        .back-link {
-            font-family: 'Share Tech Mono', monospace;
-            color: var(--text-light);
-            font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: color 0.3s ease;
-        }
-        .back-link:hover {
-            color: var(--primary-color);
+        @media (max-width: 768px) {
+            iframe {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -59,9 +57,45 @@
     </header>
 
     <main>
-        <div class="game-container">
+        <a href="index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+        
+        <div class="technical-docs container" style="margin-top: 120px; margin-bottom: 2rem;">
+            <h2>Funny Platformer (Tech Demo)</h2>
+            <h3>Project Overview</h3>
+            <p>A physics-based 2D platformer designed to demonstrate robust game architecture and responsive character controls. This project serves as a Vertical Slice to showcase core Unity development skills.</p>
+            <p style="color: var(--primary-color); font-style: italic; border-left: 3px solid var(--primary-color); padding-left: 1rem; margin-top: 1rem;">Note: This project is a "Vertical Slice" tech demo intended to showcase specific mechanics and architecture. It is not a full-length game and focuses on depth of polish over breadth of content.</p>
+        </div>
+
+        <div class="game-container" style="min-height: auto; padding-top: 0;">
+            <div class="mobile-warning">
+                <h3><i class="fas fa-desktop"></i> Desktop Required</h3>
+                <p>This WebGL game is not optimized for mobile devices. Please visit on a desktop computer to play.</p>
+            </div>
             <iframe src="Demos/Platfromer/index.html" title="Funny Platformer" frameborder="0" scrolling="no"></iframe>
-            <a href="index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+        </div>
+
+        <div class="technical-docs container">
+            <h3>Key Features</h3>
+            <ul>
+                <li><strong>Advanced Movement:</strong> Implemented fluid mechanics including Double Jump, Wall Sliding, and Wall Jumping using Rigidbody2D physics.</li>
+                <li><strong>Animation State Machine:</strong> Uses a clean Enum-based system to handle animation states (Idle, Run, Jump, Fall) without visual bugs.</li>
+                <li><strong>Save System:</strong> Features a persistent High-Score system using local data storage (PlayerPrefs).</li>
+                <li><strong>System Architecture:</strong> Includes a dynamic Settings Menu that automatically detects and applies valid screen resolutions for the user's monitor.</li>
+            </ul>
+
+            <h3>Technical Skills</h3>
+            <ul>
+                <li><strong>Physics:</strong> <code>Physics2D.OverlapCircle</code> for ground checks, Velocity clamping for wall slides.</li>
+                <li><strong>Patterns:</strong> Singleton Pattern (ScoreManager) for easy data access.</li>
+                <li><strong>Audio:</strong> Persistent background music that seamlessly transitions between scenes using <code>DontDestroyOnLoad</code>.</li>
+            </ul>
+
+            <h3>How to Play</h3>
+            <ul>
+                <li><strong>Move:</strong> A / D or Arrow Keys</li>
+                <li><strong>Jump:</strong> Spacebar (Press again for Double Jump)</li>
+                <li><strong>Wall Jump:</strong> Press Jump while sliding down a wall.</li>
+            </ul>
         </div>
     </main>
 

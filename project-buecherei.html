@@ -26,9 +26,39 @@
     </header>
 
     <main>
-        <section class="container" style="padding-top: 150px; min-height: 80vh;">
-            <h2>Buecherei Windows App</h2>
-            <p>Detailed project description coming soon...</p>
+        <a href="index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+        <section class="container technical-docs" style="padding-top: 150px; min-height: 80vh;">
+            <h2>Buecherei Windows App (Library Manager)</h2>
+            
+            <h3>Project Overview</h3>
+            <p>A robust desktop application designed to manage library inventories. This project demonstrates proficiency in C#, Windows Forms (WinForms), and CRUD data operations, mimicking real-world enterprise software requirements.</p>
+            <p style="color: var(--primary-color); font-style: italic; border-left: 3px solid var(--primary-color); padding-left: 1rem; margin-top: 1rem;">Note: This represents my first attempt at building a real-world ERP system. As an early learning project, it suffers from architectural flaws such as improper class implementation and lack of code reusability, which I have since learned to avoid.</p>
+            
+            <div style="margin: 2rem 0; text-align: center;">
+                <img src="media/LMS Front.png" alt="Library Management System Interface" style="max-width: 100%; border: 2px solid var(--primary-color); box-shadow: 0 0 20px rgba(255, 0, 60, 0.2);">
+            </div>
+
+            <h3>Key Features</h3>
+            <ul>
+                <li><strong>Inventory Management:</strong> Full Create, Read, Update, Delete (CRUD) functionality for book entries.</li>
+                <li><strong>Search & Filter:</strong> Implemented logic to filter the book list by Title, Author, or ISBN in real-time.</li>
+                <li><strong>User Interface:</strong> Designed a clean, event-driven Windows interface using standard controls (DataGridView, TextBoxes, Buttons).</li>
+                <li><strong>Data Persistence:</strong> Connects to a MySQL database to store library inventory, supporting persistent data management.</li>
+            </ul>
+
+            <h3>Technical Skills</h3>
+            <ul>
+                <li><strong>Object-Oriented Programming (OOP):</strong> Utilized classes to encapsulate data and methods.</li>
+                <li><strong>Event Handling:</strong> Managed UI events to create a responsive user experience.</li>
+                <li><strong>Collections:</strong> Used Lists and LINQ to handle data sorting and searching efficiently.</li>
+            </ul>
+
+            <h3>How to Run</h3>
+            <ol style="margin-left: 20px;">
+                <li>Download the repository.</li>
+                <li>Open the .sln file in Visual Studio 2022.</li>
+                <li>Build and Run (F5).</li>
+            </ol>
         </section>
     </main>
 

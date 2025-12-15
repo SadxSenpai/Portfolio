@@ -26,9 +26,37 @@
     </header>
 
     <main>
-        <section class="container" style="padding-top: 150px; min-height: 80vh;">
-            <h2>Puff Pastry Parser</h2>
-            <p>Detailed project description coming soon...</p>
+        <a href="index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+        <section class="container technical-docs" style="padding-top: 150px; min-height: 80vh;">
+            <h2>PuffPastry Parser (Discord Bot)</h2>
+
+            <h3>Project Overview</h3>
+            <p>A specialized Discord bot built to integrate Final Fantasy XIV combat data into Discord communities. It combines real-time API data fetching with advanced server management tools.</p>
+            <p style="color: var(--primary-color); font-style: italic; border-left: 3px solid var(--primary-color); padding-left: 1rem; margin-top: 1rem;">Note: The current version uses JSON for data persistence, which is efficient for small-to-medium communities. For large-scale deployment across thousands of servers, migration to a database solution (like PostgreSQL) would be recommended.</p>
+
+            <div style="margin: 2rem 0; text-align: center;">
+                <img src="media/PuffPastry_Commands.png" alt="PuffPastry Parser Bot Commands" style="max-width: 100%; border: 2px solid var(--primary-color); box-shadow: 0 0 20px rgba(255, 0, 60, 0.2);">
+            </div>
+
+            <h3>Key Features</h3>
+            <ul>
+                <li><strong>FFLogs Integration (GraphQL):</strong> Connects to the FFLogs v2 API to fetch complex combat reports.</li>
+                <li><strong>/logreport:</strong> Retrieves fight durations, kill/wipe status, and player rankings, displaying them in a paginated UI.</li>
+                <li><strong>/dancepartner:</strong> Analyzes damage data to calculate "rDPS" gains, mathematically suggesting the best teammate for buffs.</li>
+                <li><strong>Reaction Role Systems:</strong> Built a persistent, GUI-based role manager using Discord's modern Select Menus and Buttons (not just old-school emoji reactions). Includes an Admin Setup Wizard using Modals to create panels without writing code.</li>
+                <li><strong>Data Persistence:</strong> Uses JSON storage (rr_panels.json) to remember role panel configurations even after the bot restarts.</li>
+            </ul>
+
+            <div style="margin: 2rem 0; text-align: center;">
+                <img src="media/PuffPastry_ReactionRole.png" alt="Reaction Role GUI" style="max-width: 100%; border: 2px solid var(--primary-color); box-shadow: 0 0 20px rgba(255, 0, 60, 0.2);">
+            </div>
+
+            <h3>Technical Skills</h3>
+            <ul>
+                <li><strong>Asynchronous Networking:</strong> Uses aiohttp to handle GraphQL queries to FFLogs without freezing the bot.</li>
+                <li><strong>Discord UI Kit:</strong> Implemented discord.ui.View, Select, and Modal classes to create interactive, persistent interfaces.</li>
+                <li><strong>Pagination Logic:</strong> Created a custom EncounterPaginator class to handle large datasets (multiple boss fights) by splitting them into navigable pages.</li>
+            </ul>
         </section>
     </main>
 

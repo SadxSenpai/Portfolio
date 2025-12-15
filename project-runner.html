@@ -26,9 +26,33 @@
     </header>
 
     <main>
-        <section class="container" style="padding-top: 150px; min-height: 80vh;">
-            <h2>Cyberpunk Runner</h2>
-            <p>Detailed project description coming soon...</p>
+        <a href="index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+        <section class="container technical-docs" style="padding-top: 150px; min-height: 80vh;">
+            <h2>Cyberpunk Runner (Godot Prototype)</h2>
+
+            <h3>Project Overview</h3>
+            <p>A high-fidelity 2D action-platformer prototype built in Godot 4.2. This project serves as a "Vertical Slice," demonstrating the ability to combine complex C# gameplay logic with polished visual systems, including parallax backgrounds and a responsive User Interface (UI).</p>
+            
+            <p style="color: var(--primary-color); font-style: italic; border-left: 3px solid var(--primary-color); padding-left: 1rem; margin-top: 1rem;">Note: This project is a prototype focusing on the integration of C# with Godot's node system. It represents a technical exploration rather than a complete game loop.</p>
+
+            <div style="margin: 2rem 0; text-align: center;">
+                <img src="media/CyberpunkRunner.png" alt="Cyberpunk Runner Gameplay" style="max-width: 100%; border: 2px solid var(--primary-color); box-shadow: 0 0 20px rgba(255, 0, 60, 0.2);">
+            </div>
+
+            <h3>Key Features & Systems</h3>
+            <ul>
+                <li><strong>Hybrid Architecture:</strong> Uses C# for core gameplay physics (Movement, Combat) and GDScript for engine-specific tasks, showcasing versatility in .NET integration.</li>
+                <li><strong>Dynamic UI System:</strong> Implemented a robust Heads-Up Display (HUD) featuring health bars, resource meters, and character portraits, anchored to the screen via CanvasLayer to remain static during camera movement.</li>
+                <li><strong>Parallax Environment:</strong> Created a depth-based visual experience using ParallaxBackground nodes to layer the cyberpunk city backdrop behind the active gameplay area.</li>
+                <li><strong>Physics-Based Combat:</strong> Prototyped a RigidBody2D projectile system where bullets handle their own collision logic and lifetime, allowing for decoupled combat interactions.</li>
+            </ul>
+
+            <h3>Technical Skills</h3>
+            <ul>
+                <li><strong>Godot Node System:</strong> Proficient use of TileMap for level construction (pipes, platforms) and Area2D for interactive triggers (NPCs, dialogue).</li>
+                <li><strong>Input Management:</strong> Configured a custom Input Map (WASD + Space + L) to handle complex simultaneous actions like moving while shooting.</li>
+                <li><strong>Visual Polish:</strong> Integrated pixel-perfect asset rendering and layer management to create a cohesive aesthetic matching the Cyberpunk theme.</li>
+            </ul>
         </section>
     </main>
 

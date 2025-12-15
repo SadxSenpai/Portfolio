@@ -26,13 +26,51 @@
     </header>
 
     <main>
-        <section class="container" style="padding-top: 150px; min-height: 80vh; text-align: center;">
-            <h2>Reincarnated Fantasy Farmer</h2>
-            <div id="game-container" style="width: 960px; height: 600px; background: #000; margin: 2rem auto; border: 2px solid var(--primary-color);">
-                <!-- Game Canvas or Iframe will go here -->
-                <p style="padding-top: 280px; color: var(--text-muted);">Game Loading...</p>
+        <a href="index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+        <section class="container" style="padding-top: 150px;">
+            <h2>Reincarnated Fantasy Farmer (In Development)</h2>
+            <div id="game-container" style="width: 960px; max-width: 100%; height: 600px; background: #050505; margin: 2rem auto; border: 2px solid var(--primary-color); display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <i class="fas fa-hammer fa-4x" style="color: var(--primary-color); margin-bottom: 1.5rem;"></i>
+                <h3 style="color: var(--text-light); font-family: 'Share Tech Mono', monospace; margin-bottom: 0.5rem;">No Demo Available Yet</h3>
+                <p style="color: var(--text-muted);">This project is currently in active development.</p>
             </div>
-            <button class="btn" onclick="toggleFullscreen()">Fullscreen</button>
+            <!-- <button class="btn" onclick="toggleFullscreen()">Fullscreen</button> -->
+        </section>
+
+        <section class="container technical-docs" style="padding-bottom: 5rem;">
+            <h3>Project Overview</h3>
+            <p>An in-development hybrid RPG designed to bridge the gap between classic JRPG turn-based combat and cozy farming simulation. The current prototype focuses on establishing the core architecture required to balance these two distinct game loops—relaxing top-down exploration and strategic battles.</p>
+            <p style="color: var(--primary-color); font-style: italic; border-left: 3px solid var(--primary-color); padding-left: 1rem; margin-top: 1rem;">Note: This is an early development build. While it represents the most successful iteration of the core systems so far, it still contains known bugs and incomplete features.</p>
+
+            <div style="margin: 2rem 0; text-align: center;">
+                <img src="media/FanatsyFarmerCombat.png" alt="Fantasy Farmer Combat System" style="max-width: 100%; border: 2px solid var(--primary-color); box-shadow: 0 0 20px rgba(255, 0, 60, 0.2);">
+            </div>
+
+            <h3>Current Implementation (Prototype)</h3>
+            <ul>
+                <li><strong>JRPG Combat Foundation:</strong> Successfully implemented the core turn-based battle loop. The current build features a BattleSystem that manages turns, energy costs, and special attacks.</li>
+                <li><strong>World Persistence:</strong> Built a robust Singleton GameManager that tracks player position and world state. This system allows for seamless transitions between the "Peaceful" overworld and "Combat" scenes without losing progress.</li>
+                <li><strong>AI & Navigation:</strong> Integrated Unity's NavMeshAgent for 2D space to drive enemy behavior. Enemies currently wander the overworld and initiate combat upon player detection.</li>
+                <li><strong>Game Feel:</strong> Implemented a NudgeEffect system to add visual impact ("juice") to attacks, ensuring the turn-based combat feels responsive and punchy.</li>
+            </ul>
+
+            <div style="margin: 2rem 0; text-align: center;">
+                <img src="media/FantasyFarmerOverworld.png" alt="Fantasy Farmer Overworld Exploration" style="max-width: 100%; border: 2px solid var(--primary-color); box-shadow: 0 0 20px rgba(255, 0, 60, 0.2);">
+            </div>
+
+            <h3>Technical Architecture</h3>
+            <ul>
+                <li><strong>State Management:</strong> Utilizes C# Enums to strictly control battle flow (Start, PlayerTurn, EnemyTurn, Won/Lost), preventing logic errors during turn transitions.</li>
+                <li><strong>Asynchronous Logic:</strong> Heavily uses Coroutines to manage animation timing and turn delays, preventing the UI from freezing during enemy actions.</li>
+                <li><strong>Data Handling:</strong> Includes a system to track unique Enemy IDs (defeatedEnemyID), ensuring defeated enemies remain removed from the overworld after battle.</li>
+            </ul>
+
+            <h3>Future Development Roadmap</h3>
+            <ul>
+                <li><strong>Farming Systems:</strong> Implementation of the grid-based farming mechanics (planting, watering, harvesting) to complement the combat.</li>
+                <li><strong>Inventory Expansion:</strong> Extending the current GameManager to handle crops, seeds, and crafting materials.</li>
+                <li><strong>Dialogue System:</strong> Adding narrative elements to enhance the "Cozy" atmosphere.</li>
+            </ul>
         </section>
     </main>
 
