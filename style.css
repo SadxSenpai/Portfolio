@@ -455,6 +455,91 @@ h2::after {
     box-shadow: 0 0 10px var(--primary-color);
 }
 
+/* Netrunner / Terminal Background (About+) */
+.content-stream {
+    position: relative;
+    overflow: hidden;
+}
+
+.content-stream > section {
+    position: relative;
+    z-index: 1;
+}
+
+.content-stream::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.55;
+    background-image:
+        /* subtle red grid */
+        linear-gradient(color-mix(in srgb, var(--primary-color) 12%, transparent) 1px, transparent 1px),
+        linear-gradient(90deg, color-mix(in srgb, var(--primary-color) 10%, transparent) 1px, transparent 1px),
+        /* scanlines */
+        repeating-linear-gradient(
+            180deg,
+            color-mix(in srgb, var(--text-light) 6%, transparent) 0px,
+            color-mix(in srgb, var(--text-light) 6%, transparent) 1px,
+            transparent 1px,
+            transparent 5px
+        ),
+        /* vignette */
+        radial-gradient(
+            ellipse at top,
+            color-mix(in srgb, var(--primary-color) 14%, transparent) 0%,
+            transparent 60%
+        ),
+        /* tiny green accent glow (keeps it "netrunner" not just red) */
+        radial-gradient(
+            circle at 30% 20%,
+            color-mix(in srgb, var(--secondary-color) 8%, transparent) 0%,
+            transparent 45%
+        );
+    background-size: 90px 90px, 90px 90px, 100% 6px, 100% 100%, 100% 100%;
+    background-position: 0 0, 0 0, 0 0, 0 0, 0 0;
+    animation: terminal-drift 22s linear infinite;
+}
+
+.content-stream::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.25;
+    background-image:
+        linear-gradient(
+            135deg,
+            transparent 0%,
+            color-mix(in srgb, var(--primary-color) 9%, transparent) 35%,
+            transparent 70%
+        );
+    background-size: 260% 260%;
+    animation: terminal-sheen 10s ease-in-out infinite;
+}
+
+@keyframes terminal-drift {
+    0% {
+        background-position: 0 0, 0 0, 0 0, 0 0, 0 0;
+    }
+    100% {
+        background-position: 180px 260px, -220px 140px, 0 0, 0 0, 0 0;
+    }
+}
+
+@keyframes terminal-sheen {
+    0%, 100% {
+        transform: translate3d(-6%, -2%, 0);
+        opacity: 0.18;
+    }
+    50% {
+        transform: translate3d(6%, 2%, 0);
+        opacity: 0.28;
+    }
+}
+
 /* About Section */
 .about-content {
     display: grid;
