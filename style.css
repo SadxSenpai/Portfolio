@@ -540,6 +540,252 @@ h2::after {
     }
 }
 
+/* Resume "Terminal Mash" */
+.resume-lab {
+    padding-bottom: 5rem;
+}
+
+.resume-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    margin-top: -1.75rem;
+    margin-bottom: 2.5rem;
+    font-family: 'Share Tech Mono', monospace;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.terminal-desk {
+    position: relative;
+    min-height: auto;
+    border: 1px solid var(--border-color);
+    background:
+        linear-gradient(color-mix(in srgb, var(--primary-color) 10%, transparent) 1px, transparent 1px),
+        linear-gradient(90deg, color-mix(in srgb, var(--primary-color) 10%, transparent) 1px, transparent 1px),
+        radial-gradient(circle at 22% 18%, color-mix(in srgb, var(--secondary-color) 10%, transparent) 0%, transparent 50%),
+        radial-gradient(ellipse at top, color-mix(in srgb, var(--primary-color) 10%, transparent) 0%, transparent 62%),
+        color-mix(in srgb, var(--card-bg) 90%, transparent);
+    background-size: 56px 56px, 56px 56px, 100% 100%, 100% 100%, auto;
+    background-position: 0 0, 0 0, 0 0, 0 0, 0 0;
+    overflow: hidden;
+    padding: 1.25rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    align-items: start;
+    grid-template-areas:
+        "profile summary"
+        "links skills"
+        "exp edu";
+}
+
+.terminal-desk::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.2;
+    background-image:
+        repeating-linear-gradient(
+            180deg,
+            color-mix(in srgb, var(--text-light) 6%, transparent) 0px,
+            color-mix(in srgb, var(--text-light) 6%, transparent) 1px,
+            transparent 1px,
+            transparent 6px
+        );
+}
+
+.terminal-window {
+    position: relative;
+    border: 1px solid var(--border-color);
+    background: color-mix(in srgb, var(--card-bg) 92%, transparent);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+    width: auto;
+    transform: none;
+}
+
+.terminal-window.w-profile { grid-area: profile; }
+.terminal-window.w-summary { grid-area: summary; }
+.terminal-window.w-links { grid-area: links; }
+.terminal-window.w-skills { grid-area: skills; }
+.terminal-window.w-exp { grid-area: exp; }
+.terminal-window.w-edu { grid-area: edu; }
+
+.terminal-titlebar {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.65rem 0.85rem;
+    border-bottom: 1px solid var(--border-color);
+    background: color-mix(in srgb, var(--bg-color) 80%, transparent);
+    font-family: 'Share Tech Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.terminal-dot {
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--border-color);
+    background: color-mix(in srgb, var(--primary-color) 20%, transparent);
+}
+
+.terminal-title {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    flex: 1;
+}
+
+.terminal-controls {
+    display: inline-flex;
+    gap: 0.35rem;
+}
+
+.terminal-pill {
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--border-color);
+    background: transparent;
+}
+
+.terminal-body {
+    padding: 1rem 1rem 1.1rem;
+    color: var(--text-light);
+}
+
+.terminal-h {
+    font-family: 'Share Tech Mono', monospace;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.35rem;
+    font-size: 1.1rem;
+}
+
+.terminal-h2 {
+    font-family: 'Share Tech Mono', monospace;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0.85rem 0 0.5rem;
+    font-size: 0.9rem;
+}
+
+.terminal-muted {
+    color: var(--text-muted);
+    margin-top: 0.35rem;
+}
+
+.terminal-kv {
+    margin-top: 0.75rem;
+    display: grid;
+    gap: 0.35rem;
+    color: var(--text-muted);
+}
+
+.terminal-k {
+    color: var(--secondary-color);
+}
+
+.terminal-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.terminal-tag {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.8rem;
+    padding: 0.25rem 0.6rem;
+    border: 1px solid color-mix(in srgb, var(--primary-color) 40%, var(--border-color));
+    color: var(--primary-color);
+    background: rgba(255, 0, 60, 0.06);
+}
+
+.terminal-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.terminal-list {
+    margin-left: 1.1rem;
+    color: var(--text-muted);
+}
+
+.terminal-timeline {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.75rem;
+    display: grid;
+    gap: 0.6rem;
+}
+
+.terminal-timeline li {
+    display: grid;
+    grid-template-columns: 4.2rem 1fr;
+    gap: 0.75rem;
+    padding-left: 0.75rem;
+    border-left: 2px solid color-mix(in srgb, var(--primary-color) 35%, transparent);
+}
+
+.terminal-time {
+    font-family: 'Share Tech Mono', monospace;
+    color: var(--primary-color);
+}
+
+.terminal-event {
+    color: var(--text-muted);
+}
+
+.resume-links {
+    display: grid;
+    gap: 0.6rem;
+    margin-top: 0.25rem;
+}
+
+.resume-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--border-color);
+    color: var(--text-light);
+    background: color-mix(in srgb, var(--bg-color) 70%, transparent);
+    font-family: 'Share Tech Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+}
+
+.resume-link:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(255, 0, 60, 0.2);
+}
+
+@media (max-width: 900px) {
+    .terminal-desk {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        grid-template-areas:
+            "profile"
+            "summary"
+            "links"
+            "skills"
+            "exp"
+            "edu";
+    }
+
+    .terminal-split {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* About Section */
 .about-content {
     display: grid;
