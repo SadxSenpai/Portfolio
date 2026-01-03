@@ -32,10 +32,11 @@
                 <div class="hero-text">
                     <h1>Hello, I'm <span class="hero-glitch-text layers glitch" data-text="Marvin"><span>Marvin</span></span></h1>
 
-                    <p class="hero-subtitle"><span class="typewriter"></span></p>
+                    <p class="hero-subtitle"><span class="typewriter">Full-Stack Developer | Enterprise Solutions Architect</span></p>
                     <div class="hero-btns">
                         <a href="#expertise" class="btn">View My Expertise</a>
                         <a href="#contact" class="btn btn-outline">Contact Me</a>
+                        <a href="resume.html" class="btn btn-outline">Resume</a>
                     </div>
                 </div>
                 <div class="hero-visual">
@@ -56,17 +57,15 @@
 <pre><code><span class="keyword">public class</span> <span class="class-name">Developer</span> 
 {
     <span class="keyword">public string</span> <span class="property">Name</span> { <span class="keyword">get;</span> } = <span class="string">"Marvin"</span>;
-    <span class="keyword">public string[]</span> <span class="property">Skills</span> { <span class="keyword">get;</span> } = {
-        <span class="string">"C#"</span>, <span class="string">".NET"</span>, <span class="string">"Unity"</span>
+    <span class="keyword">public string[]</span> <span class="property">Tech</span> { <span class="keyword">get;</span> } = {
+        <span class="string">"C#"</span>, <span class="string">".NET"</span>, <span class="string">"Python"</span>, <span class="string">"AWS"</span>
     };
 
-    <span class="keyword">public async Task</span> <span class="function">CreateMagic</span>() 
+    <span class="keyword">public async Task</span> <span class="function">BuildSolutions</span>() 
     {
-        <span class="keyword">while</span>(<span class="boolean">!Coffee.IsEmpty</span>) 
-        {
-            <span class="keyword">await</span> <span class="function">Code</span>();
-            <span class="keyword">await</span> <span class="function">Deploy</span>();
-        }
+        <span class="keyword">await</span> <span class="function">DesignArchitecture</span>();
+        <span class="keyword">await</span> <span class="function">DevelopFeatures</span>();
+        <span class="keyword">await</span> <span class="function">DeployToCloud</span>();
     }
 }</code></pre>
                             </div>
@@ -83,22 +82,20 @@
                 <h2>About Me</h2>
                 <div class="about-content">
                     <div class="about-text">
-                        <p>I am a passionate developer with a knack for creating efficient and scalable solutions. My journey in coding began with a curiosity for how things work, which quickly evolved into a career in software development.</p>
-                        <p>With a strong foundation in C# and .NET, I specialize in building robust applications and immersive games. I love tackling complex problems and turning ideas into reality through code.</p>
-
-                        <div class="hero-btns" style="justify-content: flex-start; margin-top: 1.25rem;">
-                            <a href="resume.html" class="btn btn-outline">Resume</a>
-                        </div>
+                        <p>Full-stack developer with a military background in Cyber and Communications Operations. I bring disciplined, security-conscious software engineering practices to every project. My expertise spans enterprise application development, cloud infrastructure, and scalable system design.</p>
+                        <p>I specialize in building robust, maintainable solutions using modern technologies including C#/.NET, Python, and cloud platforms. From CRUD systems and workflow automation to full-stack web applications, I design solutions that solve real business problems efficiently and reliably.</p>
                     </div>
                     <div class="skills">
                         <span class="skill-tag">C#</span>
-                        <span class="skill-tag">.NET Core</span>
-                        <span class="skill-tag">Unity</span>
+                        <span class="skill-tag">.NET</span>
+                        <span class="skill-tag">Blazor</span>
                         <span class="skill-tag">Python</span>
                         <span class="skill-tag">SQL</span>
                         <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">AWS</span>
                         <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Flutter</span>
                     </div>
                 </div>
             </div>
@@ -109,32 +106,75 @@
                 <h2>My Expertise</h2>
                 <div class="expertise-grid">
                     <div class="expertise-card" data-tilt>
-                        <div class="card-icon"><i class="fab fa-unity"></i></div>
-                        <h3>Unity Game Dev</h3>
-                        <p>Creating immersive 2D and 3D gaming experiences. Proficient in C# scripting, physics, and game mechanics.</p>
+                        <div class="card-icon"><i class="fas fa-layer-group"></i></div>
+                        <h3>Full-Stack Development</h3>
+                        <p>End-to-end application development across frontend, backend, and database layers. Experienced with C#/.NET, Python, JavaScript, and Flutter for cross-platform solutions.</p>
                         <div class="tech-tags">
-                            <span>Unity Engine</span>
-                            <span>C#</span>
-                            <span>Game Design</span>
-                        </div>
-                    </div>
-                    <div class="expertise-card" data-tilt>
-                        <div class="card-icon"><i class="fab fa-microsoft"></i></div>
-                        <h3>C# .NET Development</h3>
-                        <p>Developing robust desktop and web applications using the .NET ecosystem. Specializing in clean architecture.</p>
-                        <div class="tech-tags">
-                            <span>.NET 8</span>
-                            <span>WPF</span>
-                            <span>Windows Apps</span>
-                        </div>
-                    </div>
-                    <div class="expertise-card" data-tilt>
-                        <div class="card-icon"><i class="fab fa-discord"></i></div>
-                        <h3>Discord Bots</h3>
-                        <p>Creating advanced, interactive Discord bots using Python (discord.py). From tools to game integrations.</p>
-                        <div class="tech-tags">
-                            <span>discord.py</span>
+                            <span>C# .NET</span>
+                            <span>Blazor</span>
                             <span>Python</span>
+                            <span>JavaScript</span>
+                            <span>Flutter</span>
+                        </div>
+                    </div>
+                    <div class="expertise-card" data-tilt>
+                        <div class="card-icon"><i class="fas fa-cogs"></i></div>
+                        <h3>Enterprise Solutions</h3>
+                        <p>Designing and implementing business-critical applications including CRUD systems, workflow automation, approval systems, and ERP-style tools. Database design and data management expertise.</p>
+                        <div class="tech-tags">
+                            <span>CRUD Systems</span>
+                            <span>Workflows</span>
+                            <span>Database Design</span>
+                            <span>Business Logic</span>
+                            <span>WPF</span>
+                        </div>
+                    </div>
+                    <div class="expertise-card" data-tilt>
+                        <div class="card-icon"><i class="fas fa-cloud"></i></div>
+                        <h3>Cloud & DevOps</h3>
+                        <p>Containerization, cloud deployment, and infrastructure automation. Experience with AWS, Docker, and CI/CD practices. API integration and system automation expertise.</p>
+                        <div class="tech-tags">
+                            <span>AWS</span>
+                            <span>Docker</span>
+                            <span>CI/CD</span>
+                            <span>RESTful APIs</span>
+                            <span>Automation</span>
+                        </div>
+                    </div>
+                    <div class="expertise-card" data-tilt>
+                        <div class="card-icon"><i class="fas fa-globe"></i></div>
+                        <h3>Web Development</h3>
+                        <p>Building responsive web applications using modern frameworks and technologies. Proficient in Blazor, JavaScript, HTML/CSS, and creating user-friendly interfaces with strong UX principles.</p>
+                        <div class="tech-tags">
+                            <span>Blazor</span>
+                            <span>JavaScript</span>
+                            <span>HTML/CSS</span>
+                            <span>Responsive Design</span>
+                            <span>Web APIs</span>
+                        </div>
+                    </div>
+                    <div class="expertise-card" data-tilt>
+                        <div class="card-icon"><i class="fas fa-database"></i></div>
+                        <h3>Database & Data Management</h3>
+                        <p>Design and optimization of relational databases with strong SQL expertise. Data modeling, normalization, query optimization, and implementation of efficient data management solutions.</p>
+                        <div class="tech-tags">
+                            <span>SQL</span>
+                            <span>Data Modeling</span>
+                            <span>Query Optimization</span>
+                            <span>Database Design</span>
+                            <span>Normalization</span>
+                        </div>
+                    </div>
+                    <div class="expertise-card" data-tilt>
+                        <div class="card-icon"><i class="fas fa-tools"></i></div>
+                        <h3>Automation & Tooling</h3>
+                        <p>Creating utility tools and automation scripts for increased productivity. Experience with CLI applications, document processing, Excel automation, and custom tooling solutions.</p>
+                        <div class="tech-tags">
+                            <span>Python Scripts</span>
+                            <span>CLI Tools</span>
+                            <span>Document Processing</span>
+                            <span>Excel Automation</span>
+                            <span>System Integration</span>
                         </div>
                     </div>
                 </div>
@@ -146,25 +186,12 @@
                 <h2>Featured Projects</h2>
                 <div class="project-grid">
                     <div class="project-card">
-                        <div class="project-image" style="background: linear-gradient(45deg, #000000, #808080);">
-                            <i class="fab fa-unity project-icon-overlay"></i>
-                        </div>
-                        <div class="project-info">
-                            <h3>Funny Platformer</h3>
-                            <p>A 2D platformer game built with Unity and C#.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/SadxSenpai/Funny_Platformer" target="_blank"><i class="fab fa-github"></i> Code</a>
-                                <a href="play-platformer.html"><i class="fas fa-gamepad"></i> Play Now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
                         <div class="project-image" style="background: linear-gradient(45deg, #512bd4, #d42b99);">
-                            <i class="fab fa-microsoft project-icon-overlay"></i>
+                            <i class="fas fa-book-open project-icon-overlay"></i>
                         </div>
                         <div class="project-info">
-                            <h3>Buecherei Windows App</h3>
-                            <p>A library management system for Windows built with C#.</p>
+                            <h3>Library Management System</h3>
+                            <p>Enterprise-grade desktop application demonstrating complete CRUD operations, data persistence, and business logic implementation in C# WPF architecture.</p>
                             <div class="project-links">
                                 <a href="https://github.com/SadxSenpai/Buecherei_Windows_App" target="_blank"><i class="fab fa-github"></i> Code</a>
                                 <a href="project-buecherei.html"><i class="fas fa-info-circle"></i> View More</a>
@@ -173,40 +200,14 @@
                     </div>
                     <div class="project-card">
                         <div class="project-image" style="background: linear-gradient(45deg, #306998, #FFD43B);">
-                            <i class="fab fa-discord project-icon-overlay"></i>
+                            <i class="fas fa-code project-icon-overlay"></i>
                         </div>
                         <div class="project-info">
-                            <h3>Puff Pastry Parser</h3>
-                            <p>A Python Discord bot for parsing and processing data.</p>
+                            <h3>Data Processing & API Integration</h3>
+                            <p>Python application demonstrating data parsing, API integration, and cloud deployment with AWS. Handles real-time data processing and automated workflows.</p>
                             <div class="project-links">
                                 <a href="https://github.com/SadxSenpai/PuffPastry-Parser" target="_blank"><i class="fab fa-github"></i> Code</a>
                                 <a href="project-puffpastry.html"><i class="fas fa-info-circle"></i> View More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-image" style="background: linear-gradient(45deg, #2ecc71, #f1c40f);">
-                            <i class="fas fa-leaf project-icon-overlay"></i>
-                        </div>
-                        <div class="project-info">
-                            <h3>Reincarnated Fantasy Farmer</h3>
-                            <p>A fantasy farming simulation game.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/SadxSenpai/reincarneted-fantasy-farmer" target="_blank"><i class="fab fa-github"></i> Code</a>
-                                <a href="play-farmer.html"><i class="fas fa-gamepad"></i> Play Now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-image" style="background: linear-gradient(45deg, #ff00cc, #333399);">
-                            <i class="fas fa-running project-icon-overlay"></i>
-                        </div>
-                        <div class="project-info">
-                            <h3>Cyberpunk Runner</h3>
-                            <p>An endless runner game set in a cyberpunk universe.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/SadxSenpai/CyberpunkRunner" target="_blank"><i class="fab fa-github"></i> Code</a>
-                                <a href="project-runner.html"><i class="fas fa-info-circle"></i> View More</a>
                             </div>
                         </div>
                     </div>
@@ -256,6 +257,10 @@
     <footer>
         <p>&copy; 2025 Marvin Hauser. All rights reserved.</p>
     </footer>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>

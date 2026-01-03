@@ -45,22 +45,48 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Typewriter Effect
-    const texts = [
-        '> I DEVELOP UNITY GAMES',
-        '> I ENGINEER .NET SOLUTIONS',
-        '> I PROGRAM DISCORD BOTS',
-        '> I AM A CREATIVE CODER'
+    const corporateTexts = [
+        '> Full-Stack Developer',
+        '> Enterprise Solutions Architect',
+        '> Building Scalable Systems',
+        '> Cloud Infrastructure Expert',
+        '> Enterprise Problem Solver'
     ];
+    
+    const funnyTexts = [
+        '> Ctrl+Alt+Deploy',
+        '> Coffee Powered Developer',
+        '> Professional Bug Translator',
+        '> Building Things That Actually Work',
+        '> 99 Problems But Code Ain\'t One'
+    ];
+    
+    // Get random line - 20% chance funny, 80% chance corporate
+    const getRandomText = () => {
+        const isFunny = Math.random() < 0.2;
+        const textArray = isFunny ? funnyTexts : corporateTexts;
+        return textArray[Math.floor(Math.random() * textArray.length)];
+    };
+    
+    let allTexts = [];
+    for (let i = 0; i < 8; i++) {
+        allTexts.push(getRandomText());
+    }
+    
     let count = 0;
     let index = 0;
     let currentText = '';
     let letter = '';
 
     (function type() {
-        if (count === texts.length) {
+        if (count === allTexts.length) {
+            allTexts = [];
+            for (let i = 0; i < 8; i++) {
+                allTexts.push(getRandomText());
+            }
             count = 0;
         }
-        currentText = texts[count];
+        currentText = allTexts[count];
         letter = currentText.slice(0, ++index);
 
         const typewriterElement = document.querySelector('.typewriter');
@@ -76,35 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(type, 100); // Typing speed
         }
     })();
-
-    // Tilt Effect for Cards
-    const cards = document.querySelectorAll('.expertise-card');
-    cards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            // Remove transition during movement to prevent lag
-            card.style.transition = 'none';
-        });
-
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            
-            const rotateX = ((y - centerY) / centerY) * -10;
-            const rotateY = ((x - centerX) / centerX) * 10;
-            
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
-        });
-        
-        card.addEventListener('mouseleave', () => {
-            // Restore transition for smooth reset
-            card.style.transition = 'transform 0.5s ease';
-            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
-        });
-    });
 
     // Canvas Animation (Digital Rain)
     const canvas = document.getElementById('hero-canvas');
@@ -164,4 +161,24 @@ document.addEventListener('DOMContentLoaded', () => {
         section.classList.add('hidden');
         observer.observe(section);
     });
+
+    // Back to Top Button
+    const backToTopBtn = document.getElementById('back-to-top');
+    
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 });
