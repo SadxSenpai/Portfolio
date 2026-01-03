@@ -61,32 +61,49 @@ document.addEventListener('DOMContentLoaded', () => {
         '> 99 Problems But Code Ain\'t One'
     ];
     
-    // Get random line - 20% chance funny, 80% chance corporate
-    const getRandomText = () => {
-        const isFunny = Math.random() < 0.2;
-        const textArray = isFunny ? funnyTexts : corporateTexts;
-        return textArray[Math.floor(Math.random() * textArray.length)];
+    // Shuffle function
+    const shuffleArray = (arr) => {
+        const shuffled = [...arr];
+        for (let i = shuffled.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+        return shuffled;
     };
     
-    let allTexts = [];
-    for (let i = 0; i < 8; i++) {
-        allTexts.push(getRandomText());
-    }
+    let shuffledCorporate = shuffleArray(corporateTexts);
+    let shuffledFunny = shuffleArray(funnyTexts);
+    let corporateIndex = 0;
+    let funnyIndex = 0;
     
-    let count = 0;
+    // Get next line - cycles through arrays without repeating
+    const getNextText = () => {
+        const isFunny = Math.random() < 0.2;
+        
+        if (isFunny) {
+            const text = shuffledFunny[funnyIndex];
+            funnyIndex++;
+            if (funnyIndex >= shuffledFunny.length) {
+                shuffledFunny = shuffleArray(funnyTexts);
+                funnyIndex = 0;
+            }
+            return text;
+        } else {
+            const text = shuffledCorporate[corporateIndex];
+            corporateIndex++;
+            if (corporateIndex >= shuffledCorporate.length) {
+                shuffledCorporate = shuffleArray(corporateTexts);
+                corporateIndex = 0;
+            }
+            return text;
+        }
+    };
+    
     let index = 0;
-    let currentText = '';
+    let currentText = getNextText();
     let letter = '';
 
     (function type() {
-        if (count === allTexts.length) {
-            allTexts = [];
-            for (let i = 0; i < 8; i++) {
-                allTexts.push(getRandomText());
-            }
-            count = 0;
-        }
-        currentText = allTexts[count];
         letter = currentText.slice(0, ++index);
 
         const typewriterElement = document.querySelector('.typewriter');
@@ -95,8 +112,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (letter.length === currentText.length) {
-            count++;
             index = 0;
+            currentText = getNextText();
             setTimeout(type, 2000); // Wait before typing next word
         } else {
             setTimeout(type, 100); // Typing speed
